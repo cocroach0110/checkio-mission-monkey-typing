@@ -34,16 +34,17 @@ from checkio.referees import checkers
 
 from tests import TESTS
 
+cover = """def conver(func, data):
+    return func(data[0], set(data[1]))
+"""
+
 api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
         cover_code={
-            'python-27': cover_codes.unwrap_args,  # or None
-            'python-3': cover_codes.unwrap_args
+            'python-27': cover,
+            'python-3': cover
         },
-        # checker=None,  # checkers.float.comparison(2)
-        # add_allowed_modules=[],
-        # add_close_builtins=[],
-        # remove_allowed_modules=[]
+        function_name="count_words"
     ).on_ready)

@@ -44,7 +44,8 @@ such as the complete works of <a href="http://en.wikipedia.org/wiki/John_Wallis"
     You are given a short text and sensible words.
     You should count how many words are included in the given text.
     A word should be solid and can be a part of other word.
-    Text letter case does not matter. Words are given in lowercase.
+    Text letter case does not matter. Words are given in lowercase and don't repeat.
+    If a word appear several times in the text, then count it only once.
 </p>
 
 
@@ -56,7 +57,7 @@ such as the complete works of <a href="http://en.wikipedia.org/wiki/John_Wallis"
 
 <p>
     <strong>Input: </strong> Two arguments.
-    A text as a string (unicode for py2) and words as a tuple of strings (unicode for py2).
+    A text as a string (unicode for py2) and words as a set of strings (unicode for py2).
 </p>
 
 <p>
@@ -69,17 +70,21 @@ such as the complete works of <a href="http://en.wikipedia.org/wiki/John_Wallis"
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-<!--TODO-->
+count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
+count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2
+count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            {"sum", "hamlet", "infinity", "anything"}) == 1
     </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <!--TODO-->
+    Python is useful and powerful language for text processing.
+    This is a simple example of the text searching tool.
 </p>
 
 <p>
     <strong>Precondition:</strong><br>
     0 &lt; text &le; 256<br>
-    all(3 &le; w and w.islower() for w in words)
+    all(3 &le; w and w.islower() and w.isalpha for w in words)
 </p>

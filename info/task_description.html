@@ -1,44 +1,85 @@
-<p>
-    <i>( Describe task in general )</i>
+<style>
+    p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+
+<div class="story">
+    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
+         <!--style="float: left; margin: 10px;">-->
+
+    <p>
+        ... If I let my fingers wander idly over the keys of a typewriter it might happen that my screed made an
+        intelligible sentence. If an army of monkeys were strumming on typewriters they might write all the books in the
+        British Museum. The chance of their doing so is decidedly more favourable than the chance of the molecules
+        returning to one half of the vessel.
+    </p>
+    <p class="quote-source">
+        A. S. Eddington. The Nature of the Physical World: The Gifford Lectures, 1927.
+    </p>
+    <div style="clear: right;"></div>
+    <p></p>
+    <p>"Ford!" he said, "there's an infinite number of monkeys outside who want to talk to us about this script for
+        Hamlet they've worked out."</p>
+    <p class="quote-source">
+        Douglas Adams. The Hitchhikers' Guide to the Galaxy.
+    </p>
+
+</div>
+        <p>
+<a href="http://en.wikipedia.org/wiki/Infinite_monkey_theorem">The infinite monkey theorem</a>
+states that a monkey hitting keys at random on a typewriter keyboard
+for an infinite amount of time will almost surely type a given text,
+such as the complete works of <a href="http://en.wikipedia.org/wiki/John_Wallis">John Wallis</a>.
 </p>
 
 <p>
-    Sum two passed ints
-</p>
-
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    Let's suppose our robo-monkey are typing, typing and typing.
+    And now we have a lot various short texts.
+    Let's try to check them for sensible word inclusions.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    You are given a short text and sensible words.
+    You should count how many words are included in the given text.
+    A word should be solid and can be a part of other word.
+    Text letter case does not matter. Words are given in lowercase.
 </p>
 
+
+<p>
+    For example,
+    text - "<em>How</em> <em>are</em>sjfhdskfhskd <em>you</em>?", words - ("how", "are", "you", "hello").
+    The result will be 3.
+</p>
+
+<p>
+    <strong>Input: </strong> Two arguments.
+    A text as a string (unicode for py2) and words as a tuple of strings (unicode for py2).
+</p>
+
+<p>
+    <strong>Output: </strong> The number of words in the text as an integer.
+</p>
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
+<!--TODO-->
     </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    <!--TODO-->
 </p>
 
 <p>
-    <strong>Precondition:</strong>
-    <i>Constraints for Input</i>
+    <strong>Precondition:</strong><br>
+    0 &lt; text &le; 256<br>
+    all(3 &le; w and w.islower() for w in words)
 </p>

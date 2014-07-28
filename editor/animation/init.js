@@ -40,10 +40,16 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
 
             //YOUR FUNCTION NAME
-            var fname = 'checkio';
+            var fname = 'count_words';
 
             var checkioInput = data.in;
-            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput)  + ')';
+            if (data.ext || data.ext.show) {
+
+                var checkioInputStr = fname + '(' +  data.ext.show  + ')';
+            }
+            else {
+                checkioInputStr = "count_words('How aresjfhdskfhskd you?', {'you', 'how', 'hello', 'are'})";
+            }
 
             var failError = function(dError) {
                 $content.find('.call').html('Fail: ' + checkioInputStr);
@@ -89,13 +95,9 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.answer').remove();
             }
 
-            //Your code here about test explanation animation
-            //$content.find(".explanation").html("Something text for example");
-            //
-            //
-            //
-            //
-            //
+            if (explanation) {
+                $content.find(".explanation").html(explanation);
+            }
 
 
             this_e.setAnimationHeight($content.height() + 60);

@@ -34,7 +34,7 @@ from checkio.referees import checkers
 
 from tests import TESTS
 
-cover = """def conver(func, data):
+cover = """def cover(func, data):
     return func(data[0], set(data[1]))
 """
 

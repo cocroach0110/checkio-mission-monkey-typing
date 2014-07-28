@@ -58,6 +58,17 @@
     border-color: #de0202;
 }
 
+.animation-content .explanation {
+    font-family: Roboto, Geneva, serif !important;
+    font-size: 15px;
+    padding: 10px;
+    color: #294270;
+    display: block;
+    text-align: center;
+    word-break: break-word;
+}
+
+
 .tryit-content {
     background-color: #dfe8f7;
     font-family: Verdana, Arial, helvetica, sans-serif;

@@ -57,7 +57,7 @@ TESTS = {
             "input": ['ab cd', ['abc']],
             "answer": 0,
             "show": "'ab cd', {'abc'}",
-            "explanation": 'abc'
+            "explanation": 'ab cd'
         },
         {
             "input": ['Oooooooooooo Thhhhe', ['the', 'hey']],

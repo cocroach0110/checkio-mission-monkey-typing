@@ -44,6 +44,7 @@ TESTS = {
             "show": "'PWEtRJYqAKYqMcnJxZSStUOyAJkvdtRgdBxnPpXZkBBZXmgatDzedINMmRVxWCIeUfXShDvlWCQtgGYXOxsFpdlNHhxUBRAwAZqXdCkFdjYhBGwpVwJngGxgTDdBHVDdufWGbdENvxbOMylqdPWBiKpptHbXuZwFKBAwCGiXNkWxdHwadOqduygveRsmWfpjEWAztZyoLLJjdeTSHuhJRvUjNDPZyJLseXUROuedMIiudevXESwFjuZACswxnUhm', {'man', 'who', 'the', 'any', 'zed', 'hey', 'box'}",
             "explanation": 'PWEtRJYqAKYqMcnJxZSStUOyAJkvdtRgdBxnPpXZkBBZXmgatD<strong>zed</strong>INMmRVxWCIeUfXShDvlWCQtgGYXOxsFpdlNHhxUBRAwAZqXdCkFdjYhBGwpVwJngGxgTDdBHVDdufWGbdENvxbOMylqdPWBiKpptHbXuZwFKBAwCGiXNkWxdHwadOqduygveRsmWfpjEWAztZyoLLJjdeTSHuhJRvUjNDPZyJLseXUROuedMIiudevXESwFjuZACswxnUhm'
         },
+
     ],
     "Extra": [
         {
@@ -51,6 +52,12 @@ TESTS = {
             "answer": 2,
             "show": "'LOLOLOLOLOL', {'lol', 'olo'}",
             "explanation": '<strong>LOLOLOLOLOL</strong>'
+        },
+        {
+            "input": ['ab cd', ['abc']],
+            "answer": 2,
+            "show": "'ab cd', {'abc'}",
+            "explanation": 'abc'
         },
         {
             "input": ['Oooooooooooo Thhhhe', ['the', 'hey']],

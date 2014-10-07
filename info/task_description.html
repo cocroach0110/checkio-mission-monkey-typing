@@ -88,5 +88,5 @@ count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
 <p>
     <strong>Precondition:</strong><br>
     0 &lt; len(text) &le; 256<br>
-    all(3 &le; w and w.islower() and w.isalpha for w in words)
+    all(3 &le; len(w) and w.islower() and w.isalpha for w in words)
 </p>

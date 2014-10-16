@@ -1,0 +1,90 @@
+<style>
+    p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+
+<div class="story">
+    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
+    <!--style="float: left; margin: 10px;">-->
+
+    <p>
+        ... Si je laisse mes doigts taper au hasard sur le clavier d'une machine &agrave; &eacute;crire, il est possible qu'il en r&eacute;sulte une phrase compr&eacute;hensible.
+        Si une arm&eacute;e de singes tape sur des machines &agrave; &eacute;crire, ils pourraient &eacute;crire la totalit&eacute; des livres du British Museum.
+        La probabilit&eacute; qu'ils arrivent &agrave; ce r&eacute;sultat est bien plus favorable que celle que les mol&eacute;cules retournent dans une des moiti&eacute;s du r&eacute;cipient.
+    </p>
+
+    <p class="quote-source">
+        A. S. Eddington, La Nature du Monde Physique : Conf&eacute;rences Gifford, 1927.
+    </p>
+
+    <div style="clear: right;"></div>
+    <p></p>
+
+    <p>&quot;Ford, dit-il, il y a un nombre infini de singes &agrave; l'ext&eacute;rieur qui veulent nous parler du script d'Hamlet qu'ils ont &eacute;labor&eacute;.&quot;</p>
+
+    <p class="quote-source">
+        Douglas Adams, Le Guide du Voyageur Galactique.
+    </p>
+
+</div>
+<p>
+    <a href="http://fr.wikipedia.org/wiki/Paradoxe_du_singe_savant">Le paradoxe du singe savant</a>
+    d&eacute;clare qu'un singe, tapant sur une machine &agrave; &eacute;crire pendant une dur&eacute;e infinie, finirait par reproduire &agrave; coup s&ucirc;r un texte donn&eacute;,
+    tel que les travaux complets de <a href="http://fr.wikipedia.org/wiki/John_Wallis">John Wallis</a>, ou plus vraisemblablement, un roman de 
+    <a href="http://fr.wikipedia.org/wiki/Dan_brown">Dan Brown</a>.
+</p>
+
+<p>
+    Supposons que nos singes, sur leurs machines &agrave; &eacute;crire, tapent, tapent et tapent encore, jusqu'&agrave; produire un grand nombre de bouts de texte diff&eacute;rents.
+    Essayons de trouver si ceux-ci incluent quelques mots en particulier.
+</p>
+
+<p>
+    On vous donne un texte pouvant inclure des mots pr&eacute;cis. Vous devez compter combien de ces mots sont inclus dans ce texte.
+    Un mot peut &ecirc;tre entier ou faire partie d'un autre mot. La casse des lettres du texte n'a pas d'importance.
+    Les mots &agrave; chercher sont donn&eacute;s en minuscules et ne se r&eacute;p&egrave;tent pas.
+    Si un m&ecirc;me mot apparait plusieurs fois, celui-ci ne doit &ecirc;tre compt&eacute; qu'une seule fois.
+</p>
+
+
+<p>
+    Par exemple,
+    texte - "<em>How</em> <em>are</em>sjfhdskfhskd <em>you</em>?", mots - ("how", "are", "you", "hello").
+    Le r&eacute;sultat est 3.
+</p>
+
+<p>
+    <strong>Entr&eacute;e : </strong> Deux arguments.
+    Un texte en tant que chaine de caract&egrave;res (en unicode pour py2) et des mots en tant qu'ensemble de chaines de caract&egrave;res (en unicode pour py2).
+</p>
+
+<p>
+    <strong>Sortie : </strong> Le nombre de mots dans le texte en tant qu'entier.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemple :</strong>
+    </p>
+    <pre class="brush: python">
+count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
+count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2
+count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            {"sum", "hamlet", "infinity", "anything"}) == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>&Agrave; quoi cela sert : </strong>
+    Python est un langage utile et puissant pour le traitement de texte.
+    Cette mission est seulement un exemple simple du genre d'outils de recherche de texte que vous pouvez construire.
+</p>
+
+<p>
+    <strong>Pr&eacute;condition :</strong><br>
+    0 &lt; len(texte) &le; 256<br>
+    all(3 &le; len(m) and m.islower() and m.isalpha for m in mots)
+</p>

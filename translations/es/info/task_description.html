@@ -1,0 +1,96 @@
+<style>
+    p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+
+<div class="story">
+    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
+    <!--style="float: left; margin: 10px;">-->
+
+    <p>
+        ... Si dejo a mis dedos caminar ociosamente sobre las teclas de una maquina de escribir podría pasar que mi
+        renglón tenga una sentencie inteligible. Si un ejercito de monos estuviese cencerreando en maquinas de escribir
+        podrían escribir todos los libros en el Museo Británico. La posibilidad de que lo hagan es decididamente más 
+        favorable que la posibilidad de que las moleculas vuelvan a la mitad del vaso.
+    </p>
+
+    <p class="quote-source">
+        A. S. Eddington. The Nature of the Physical World: The Gifford Lectures, 1927.
+        A. S. Eddington. La naturaleza del mundo físico: las lecturas Gifford, 1927.
+    </p>
+
+    <div style="clear: right;"></div>
+    <p></p>
+
+    <p>"Ford!" él dijo, "Hay una cantidad infinita de monos afuera que quieren hablarnos acerca de este libreto
+        de Hamlet que han elaborado."</p>
+
+    <p class="quote-source">
+        Douglas Adams. The Hitchhikers' Guide to the Galaxy.
+        Douglas Adams. Guía del autoestopista galáctico.
+    </p>
+
+</div>
+<p>
+    El <a href="http://en.wikipedia.org/wiki/Infinite_monkey_theorem">Teorema del mono infinito</a>
+    afirma que un mono pulsando teclas al azar sobre un teclado durante un periodo de tiempo 
+    infinito casi seguramente podrá escribir un texto determinado, como los trabakos completos de 
+    <a href="http://en.wikipedia.org/wiki/John_Wallis">John Wallis</a>, o más probablemente,
+    una novela de <a href="http://en.wikipedia.org/wiki/Dan_brown">Dan Brown</a> .
+</p>
+
+<p>
+    Supongamos que nuestros monos están tecleando, tecleando y tecleando,
+    y han producido una amplia variedad de segmentos cortos de texto. Intentemos revisarlos en busca de la inclusión
+    de palabras legibles.
+</p>
+
+<p>
+    Se te da algún texto que potencialmente incluye palabras legibles. Debes contar cuantas palabras están incluidas en el
+    texto proporcionado. Una palabra debería estar completa y podría ser parte de otra palabra. Mayúsculas o mínusculas en 
+    el texto no importan. Las palabras son dadas en mminúsculas y no se repiten. Si una palabra aparece varias veces en el texto,
+    sólo debe ser contada una vez.
+</p>
+
+
+<p>
+    Por ejemplo,
+    texto - "<em>How</em> <em>are</em>sjfhdskfhskd <em>you</em>?", palabras - ("how", "are", "you", "hello").
+    El resultado sería 3.
+</p>
+
+<p>
+    <strong>Entrada: </strong> Dos argumentos.
+    Un texto como caracter (unicode para py2) y palabras como un set de caracteres (unicode para py2).
+</p>
+
+<p>
+    <strong>Salida: </strong> El numero de palabras en el texto como un entero.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Ejemplo:</strong>
+    </p>
+    <pre class="brush: python">
+count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
+count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2
+count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            {"sum", "hamlet", "infinity", "anything"}) == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Cómo se usa: </strong>
+    Python es un lenguaje útil y potente para el procesamiento de texto.
+    Esta misión es sólo un ejemplo simple del tipo de herramientas de busqueda en texto que puedes construir.
+</p>
+
+<p>
+    <strong>Precondicion:</strong><br>
+    0 &lt; len(text) &le; 256<br>
+    all(3 &le; len(w) and w.islower() and w.isalpha for w in words)
+</p>

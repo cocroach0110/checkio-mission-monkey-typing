@@ -1,0 +1,95 @@
+<style>
+    p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+
+<div class="story">
+    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
+    <!--style="float: left; margin: 10px;">-->
+
+    <p>
+        ... Se eu deixar meus dedos passearem ociosamente sobre as teclas de uma máquina de escrever,
+        pode acontecer que a minha fita fez uma frase inteligível. Se um exército de macacos forem
+        dedilhando em máquinas de escrever eles podem vir a escrever todos os livros do Museu Britânico.
+        A chance de isto acontecer é decididamente mais favoráveis do que a chance de as moléculas
+        retornarem a metade da embarcação.
+    </p>
+
+    <p class="quote-source">
+        A. S. Eddington. The Nature of the Physical World: The Gifford Lectures, 1927.
+    </p>
+
+    <div style="clear: right;"></div>
+    <p></p>
+
+
+    <p>"Ford!" disse ele, "há um número infinito de macacos lá fora que querem conversar conosco sobre esse script para
+         Hamlet que eles criaram."</p>
+
+    <p class="quote-source">
+        Douglas Adams. O Guia do Mochileiro das Galáxias.
+    </p>
+
+</div>
+<p>
+    <a href="http://pt.wikipedia.org/wiki/Teorema_do_macaco_infinito">O Teorema do macaco infinito</a>
+    afirma que um macaco digitando aleatoriamente em um teclado por um intervalo de tempo infinito irá certamente criar
+    um texto qualquer escolhido, como por exemplo a obra completa de
+    <a href="http://pt.wikipedia.org/wiki/John_Wallis">John Wallis</a>, ou mais provavelmente,
+    um livro de <a href="http://pt.wikipedia.org/wiki/Dan_brown">Dan Brown</a>.
+</p>
+
+<p>
+    Vamos supor que os nossos macacos estão escrevendo, escrevendo e escrevendo, e produziram uma grande variedade de
+    pequenos segmentos de texto. Vamos tentar verificá-los para inclusões de algumas palavras que sejam sensatas.
+</p>
+
+<p>
+    Lhe é dado algum texto que potencialmente inclui algumas palavras sensatas. Você deve contar quantas palavras estão incluídas no
+    texto dado. Uma palavra deve ser completa e pode ser uma parte de outra palavra. As palavras são
+    dadas em letras minúsculas e não repetem. Se uma palavra aparece várias vezes no texto, esta deve ser contada apenas uma vez.
+</p>
+
+
+<p>
+    Por Exemplo,
+    texto - "<em>How</em> <em>are</em>sjfhdskfhskd <em>you</em>?", palavras - ("how", "are", "you", "hello").
+    O resultado seria 3.
+</p>
+
+<p>
+    <strong>Entrada: </strong> Dois argumentos.
+    Um texto como uma string (unicode para py2) e palavras como um set de strings (unicode para py2).
+</p>
+
+<p>
+    <strong>Saída: </strong> O número de palavras no texto como um inteiro.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemplo:</strong>
+    </p>
+    <pre class="brush: python">
+count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
+count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2
+count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            {"sum", "hamlet", "infinity", "anything"}) == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Como é utilizado: </strong>
+    Python é uma linguagem muito util e poderosa para processamento de texto.
+    Está missão é apenas um exemplo simples to tipo de ferramenta de busca de
+    texto que você pode construir.
+</p>
+
+<p>
+    <strong>pré-condição:</strong><br>
+    0 &lt; len(text) &le; 256<br>
+    all(3 &le; len(w) and w.islower() and w.isalpha for w in words)
+</p>

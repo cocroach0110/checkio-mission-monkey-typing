@@ -1,0 +1,132 @@
+<style>
+    p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+
+<div class="story">
+    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
+    <!--style="float: left; margin: 10px;">-->
+
+    <p>
+      ... もし私の指をぼんやりとタイプライターのキーにさまよわせてみたら、私の長たらしい話がわかりやすい文章を作るかもしれない。
+      もし猿の大群がタイプライターを叩き続けたら彼らはイギリスの博物館にあるすべての本を書くかもしれない。
+      分子が器の半分帰っていく機会よりも明らかに、彼らがそれをする見込みがある。
+    </p>
+
+    <!-- <p>
+        ... If I let my fingers wander idly over the keys of a typewriter it might happen that my screed made an
+        intelligible sentence. If an army of monkeys were strumming on typewriters they might write all the books in the
+        British Museum. The chance of their doing so is decidedly more favourable than the chance of the molecules
+        returning to one half of the vessel.
+    </p> -->
+
+    <p class="quote-source">
+        アーサー・エディントン. The Nature of the Physical World: ギフォード講義, 1927.
+    </p>
+
+    <!-- <p class="quote-source">
+        A. S. Eddington. The Nature of the Physical World: The Gifford Lectures, 1927.
+    </p> -->
+
+    <div style="clear: right;"></div>
+    <p></p>
+
+    <p>「フォード！」彼は言った、「外にはハムレットの台本を訓練して私たちに話したがっている無限の数の猿がいるよ。」</p>
+
+    <!-- <p>"Ford!" he said, "there's an infinite number of monkeys outside who want to talk to us about this script for
+        Hamlet they've worked out."</p> -->
+
+    <p class="quote-source">
+      ダグラス・アダムス、 銀河ヒッチハイク・ガイド
+    </p>
+
+</div>
+<p>
+    <a href="http://ja.wikipedia.org/wiki/%E7%84%A1%E9%99%90%E3%81%AE%E7%8C%BF%E5%AE%9A%E7%90%86">無限の猿定理</a>
+    は無限の時間でランダムにタイプライターのキーを叩く猿はほとんど確実に、
+    <a href="http://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%82%A6%E3%82%A9%E3%83%AA%E3%82%B9">ジョン・ウォリス</a>
+    の完成作やそれどころか<a href="http://ja.wikipedia.org/wiki/%E3%83%80%E3%83%B3%E3%83%BB%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3">ダン・ブラウン</a>
+    の小説といった文章をタイプすることを述べています。
+</p>
+
+<!-- <p>
+    <a href="http://en.wikipedia.org/wiki/Infinite_monkey_theorem">The infinite monkey theorem</a>
+    states that a monkey hitting keys at random on a typewriter keyboard for an infinite
+    length of time will almost surely type out a given text, such as the complete works of
+    <a href="http://en.wikipedia.org/wiki/John_Wallis">John Wallis</a>, or more likely,
+    a <a href="http://en.wikipedia.org/wiki/Dan_brown">Dan Brown</a> novel.
+</p> -->
+
+<p>
+  私達の猿がタイピングし続けることを考えてみましょう、彼らはいろいろな短いテキストの断片を生み出します。ではそれらに意味のある単語が含まれているか調べてみましょう。
+</p>
+
+<!-- <p>
+    Let's suppose our monkeys are typing, typing and typing,
+    and have produced a wide variety of short text segments. Let's try to check them for sensible word inclusions.
+</p> -->
+
+<p>
+  あなたは意味のある単語が含まれているかもしれないテキストが与えられます。あなたはいくつの単語が与えられたテキストに含まれているか調べなくてはいけません。
+  単語は全体が含まれている必要があり、他の単語の部分かもしれません。テキストの大文字小文字は区別しません。単語は小文字で与えられ繰り返すことはありません。もし単語がテキストに複数回出現したら、1回だけ数えるべきです。
+</p>
+
+<!-- <p>
+    You are given some text potentially including sensible words. You should count how many words are included in the
+    given text. A word should be whole and may be a part of other word. Text letter case does not matter. Words are
+    given in lowercase and don't repeat. If a word appears several times in the text, it should be counted only once.
+</p> -->
+
+<p>
+    例えば、
+    テキスト - "<em>How</em> <em>are</em>sjfhdskfhskd <em>you</em>?", 単語 - ("how", "are", "you", "hello").
+    結果は3になります。
+</p>
+
+<!-- <p>
+    For example,
+    text - "<em>How</em> <em>are</em>sjfhdskfhskd <em>you</em>?", words - ("how", "are", "you", "hello").
+    The result will be 3.
+</p> -->
+
+<p>
+    <strong>入力 </strong> 2つの引数。
+    文字列(py2ではunicode)のテキストと、単語の文字列(py2ではunicode)の集合(set)です。
+</p>
+
+<p>
+    <strong>出力 </strong> テキスト中の単語の数を表す整数
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例</strong>
+    </p>
+    <pre class="brush: python">
+count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
+count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2
+count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            {"sum", "hamlet", "infinity", "anything"}) == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>どうやって使われるか </strong>
+    Pythonはテキスト処理に有用でパワフルな言語です。
+    このミッションはあなたの作れるある種のテキスト検索ツールの簡単な例です。
+</p>
+
+<!-- <p class="for_info_only">
+    <strong>How it is used: </strong>
+    Python is a useful and powerful language for text processing.
+    This mission is only a simple example of the kind of text searching tools you could build.
+</p> -->
+
+<p>
+    <strong>事前条件</strong><br>
+    0 &lt; len(text) &le; 256<br>
+    all(3 &le; len(w) and w.islower() and w.isalpha for w in words)
+</p>

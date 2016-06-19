@@ -10,66 +10,75 @@
     <!--style="float: left; margin: 10px;">-->
 
     <p>
-        ... If I let my fingers wander idly over the keys of a typewriter it might happen that my screed made an
-        intelligible sentence. If an army of monkeys were strumming on typewriters they might write all the books in the
-        British Museum. The chance of their doing so is decidedly more favourable than the chance of the molecules
-        returning to one half of the vessel.
+        Wenn ich meine Finger zufällig über die Tasten einer Schreibmaschine gleiten lasse, kann es passieren,
+        dass im so entstehenden Wälzer ein lesbarer Satz vorkommt. Wenn eine Armee von Affen auf ihre Schreibmaschinen
+        einklimpert, dann können sie alle im British Museum enthaltenen Bücher schreiben. Die Wahrscheinlichkeit,
+        dass sie dies tun, liegt deutlich höher als die Wahrscheinlichkeit, dass sich in einem Behälter alle Moleküle
+        in einer Hälfte sammeln.
     </p>
 
     <p class="quote-source">
-        A. S. Eddington. The Nature of the Physical World: The Gifford Lectures, 1927.
+        Sir Arthur Stanley Eddington: The Nature of the Physical World: The Gifford Lectures; Macmillan, New York 1928,
+        Seite 72 (frei zitiert nach Übersetzung aus dem Englischen)
     </p>
 
     <div style="clear: right;"></div>
     <p></p>
 
-    <p>"Ford!" he said, "there's an infinite number of monkeys outside who want to talk to us about this script for
-        Hamlet they've worked out."</p>
+    <p>
+        "Ford!" sagte er, "da ist eine endlose Horde von Affen, die mit uns über ihr Drehbuch für Hamlet sprechen wollen,
+        das Sie ausgearbeitet haben."
+    </p>
 
     <p class="quote-source">
-        Douglas Adams. The Hitchhikers' Guide to the Galaxy.
+        Douglas Adams: The Hitchhikers' Guide to the Galaxy (frei übersetzt)
     </p>
 
 </div>
 <p>
-    <a href="http://en.wikipedia.org/wiki/Infinite_monkey_theorem">The infinite monkey theorem</a>
-    states that a monkey hitting keys at random on a typewriter keyboard for an infinite
-    length of time will almost surely type out a given text, such as the complete works of
-    <a href="http://en.wikipedia.org/wiki/John_Wallis">John Wallis</a>, or more likely,
-    a <a href="http://en.wikipedia.org/wiki/Dan_brown">Dan Brown</a> novel.
+    <a href="https://de.wikipedia.org/wiki/Infinite-Monkey-Theorem">Das Infinite-Monkey-Theorem</a>
+    besagt, dass ein Affe, der unendlich lange zufällig auf einer Schreibmaschine herumtippt,  fast sicher irgendwann
+    einen bestimmten Text, schreiben wird, zum Beispiel die kompletten Werke von
+
+    <a href="https://de.wikipedia.org/wiki/John_Wallis">John Wallis</a>, oder wahrscheinlicher noch,
+    eine <a href="https://de.wikipedia.org/wiki/Dan_Brown">Dan Brown</a> Novelle.
 </p>
 
 <p>
-    Let's suppose our monkeys are typing, typing and typing,
-    and have produced a wide variety of short text segments. Let's try to check them for sensible word inclusions.
+    Nehmen wir einmal an unsere Affen tippen, tippen und tippen und haben eine Vielzahl von kurzen Textsegmenten
+    produziert.
+    Lass uns versuchen, sie für nach sinnvollen Wort Einschlüssen zu durchsuchen.
 </p>
 
 <p>
-    You are given some text potentially including sensible words. You should count how many words are included in the
-    given text. A word should be whole and may be a part of other word. Text letter case does not matter. Words are
-    given in lowercase and don't repeat. If a word appears several times in the text, it should be counted only once.
+    Gegeben wird ein Text, der möglicherweise verständliche Worte enthält. Du sollst zählen, wie viele Wörter in dem
+    gegebenen Text enthalten sind.
+
+    Ein Wort sollte ganz sein und kann ein Teil des anderen Wortes sein. Gross-/Kleinschreibung spielt keine Rolle.
+    Die Wörter werden in Kleinbuchstaben vorgegeben und wiederholen sich nicht. Wenn ein Wort mehrmals im Text
+    erscheint, sollte es nur einmal gezählt werden.
 </p>
 
 
 <p>
-    For example,
+    Zum Beispiel:<br>
     text - "<em>How</em> <em>are</em>sjfhdskfhskd <em>you</em>?", words - ("how", "are", "you", "hello").
-    The result will be 3.
+    Das Ergebnis wäre 3.
 </p>
 
 <p>
-    <strong>Input: </strong> Two arguments.
-    A text as a string (unicode for py2) and words as a set of strings (unicode for py2).
+    <strong>Eingabe: </strong> Zwei Argumente.
+    Ein Text als String (unicode für Python 2) und Worte als Set von Strings (unicode für Python 2).
 </p>
 
 <p>
-    <strong>Output: </strong> The number of words in the text as an integer.
+    <strong>Ausgabe: </strong> Die Anzahl der im Text gefundenen Worte als Integer.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Beispiele:</strong>
     </p>
     <pre class="brush: python">
 count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
@@ -80,13 +89,13 @@ count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
 </div>
 
 <p class="for_info_only">
-    <strong>How it is used: </strong>
-    Python is a useful and powerful language for text processing.
-    This mission is only a simple example of the kind of text searching tools you could build.
+    <strong>Wozu das gut ist: </strong>
+    Python ist eine nützliche und leistungsfähige Sprache für die Textverarbeitung .
+    Diese Mission ist nur ein einfaches Beispiel für die Art von Textsuche Werkzeugen, die man entwickeln kann.
 </p>
 
 <p>
-    <strong>Precondition:</strong><br>
+    <strong>Bedingungen:</strong><br>
     0 &lt; len(text) &le; 256<br>
     all(3 &le; len(w) and w.islower() and w.isalpha for w in words)
 </p>

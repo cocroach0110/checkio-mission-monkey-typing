@@ -1,0 +1,101 @@
+<style>
+    p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+
+<div class="story">
+    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
+    <!--style="float: left; margin: 10px;">-->
+
+    <p>
+        Wenn ich meine Finger zufällig über die Tasten einer Schreibmaschine gleiten lasse, kann es passieren,
+        dass im so entstehenden Wälzer ein lesbarer Satz vorkommt. Wenn eine Armee von Affen auf ihre Schreibmaschinen
+        einklimpert, dann können sie alle im British Museum enthaltenen Bücher schreiben. Die Wahrscheinlichkeit,
+        dass sie dies tun, liegt deutlich höher als die Wahrscheinlichkeit, dass sich in einem Behälter alle Moleküle
+        in einer Hälfte sammeln.
+    </p>
+
+    <p class="quote-source">
+        Sir Arthur Stanley Eddington: The Nature of the Physical World: The Gifford Lectures; Macmillan, New York 1928,
+        Seite 72 (frei zitiert nach Übersetzung aus dem Englischen)
+    </p>
+
+    <div style="clear: right;"></div>
+    <p></p>
+
+    <p>
+        "Ford!" sagte er, "da ist eine endlose Horde von Affen, die mit uns über ihr Drehbuch für Hamlet sprechen wollen,
+        das Sie ausgearbeitet haben."
+    </p>
+
+    <p class="quote-source">
+        Douglas Adams: The Hitchhikers' Guide to the Galaxy (frei übersetzt)
+    </p>
+
+</div>
+<p>
+    <a href="https://de.wikipedia.org/wiki/Infinite-Monkey-Theorem">Das Infinite-Monkey-Theorem</a>
+    besagt, dass ein Affe, der unendlich lange zufällig auf einer Schreibmaschine herumtippt,  fast sicher irgendwann
+    einen bestimmten Text, schreiben wird, zum Beispiel die kompletten Werke von
+
+    <a href="https://de.wikipedia.org/wiki/John_Wallis">John Wallis</a>, oder wahrscheinlicher noch,
+    eine <a href="https://de.wikipedia.org/wiki/Dan_Brown">Dan Brown</a> Novelle.
+</p>
+
+<p>
+    Nehmen wir einmal an unsere Affen tippen, tippen und tippen und haben eine Vielzahl von kurzen Textsegmenten
+    produziert.
+    Lass uns versuchen, sie für nach sinnvollen Wort Einschlüssen zu durchsuchen.
+</p>
+
+<p>
+    Gegeben wird ein Text, der möglicherweise verständliche Worte enthält. Du sollst zählen, wie viele Wörter in dem
+    gegebenen Text enthalten sind.
+
+    Ein Wort sollte ganz sein und kann ein Teil des anderen Wortes sein. Gross-/Kleinschreibung spielt keine Rolle.
+    Die Wörter werden in Kleinbuchstaben vorgegeben und wiederholen sich nicht. Wenn ein Wort mehrmals im Text
+    erscheint, sollte es nur einmal gezählt werden.
+</p>
+
+
+<p>
+    Zum Beispiel:<br>
+    text - "<em>How</em> <em>are</em>sjfhdskfhskd <em>you</em>?", words - ("how", "are", "you", "hello").
+    Das Ergebnis wäre 3.
+</p>
+
+<p>
+    <strong>Eingabe: </strong> Zwei Argumente.
+    Ein Text als String (unicode für Python 2) und Worte als Set von Strings (unicode für Python 2).
+</p>
+
+<p>
+    <strong>Ausgabe: </strong> Die Anzahl der im Text gefundenen Worte als Integer.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+    <pre class="brush: python">
+count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
+count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2
+count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            {"sum", "hamlet", "infinity", "anything"}) == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Wozu das gut ist: </strong>
+    Python ist eine nützliche und leistungsfähige Sprache für die Textverarbeitung .
+    Diese Mission ist nur ein einfaches Beispiel für die Art von Textsuche Werkzeugen, die man entwickeln kann.
+</p>
+
+<p>
+    <strong>Bedingungen:</strong><br>
+    0 &lt; len(text) &le; 256<br>
+    all(3 &le; len(w) and w.islower() and w.isalpha for w in words)
+</p>

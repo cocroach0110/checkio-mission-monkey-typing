@@ -1,0 +1,100 @@
+<style>
+    p.quote-source {
+        float: right;
+        font-size: 10px;
+    }
+</style>
+
+<div style="text-align: center">
+        <img src="{{MEDIA}}title.png" style="max-height: 350px; max-width: 100%">
+</div>
+
+<div class="story">
+    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
+    <!--style="float: left; margin: 10px;">-->
+
+    <p>
+        ... Se lasciassi le mie dita vagare pigramente sopra i tasti di una macchina da scrivere
+        potrebbe accadere che il mio papiro avesse una frase intellegibile.
+        Se un esercito di scimmie strimpellasse su macchine da scrivere potrebbero magari scrivere
+        tutti i libri del British Museum. La probabilit&agrave; che ci riuscissero &egrave; decisamente pi&ugrave;
+        favorevole di quella che le molecole ritornino in una met&agrave; del contenitore.
+    </p>
+
+    <p class="quote-source">
+        A. S. Eddington. The Nature of the Physical World: The Gifford Lectures, 1927.
+    </p>
+
+    <div style="clear: right;"></div>
+    <p></p>
+
+    <p>"Ford!" disse, "c'&egrave; un numero infinito di scimmie fuori che vorrebbero parlarci di questo
+       copione per l'Amleto che hanno prodotto."</p>
+
+    <p class="quote-source">
+        Douglas Adams. Guida integalattica per autostoppisti.
+    </p>
+
+</div>
+<p>
+    Il <a href="https://it.wikipedia.org/wiki/Teorema_della_scimmia_instancabile">teorema della scimmia instancabile</a>
+    afferma che una scimmia che colpisse casualmente i tasti di una macchina da scrivere
+    per una quantit&agrave; di tempo infinita produrra quasi certamente un dato testo, come ad esempio
+    l'opera completa di <a href="http://it.wikipedia.org/wiki/John_Wallis">John Wallis</a>,
+    o pi&ugrave; probabilmente un romanzo di <a href="http://it.wikipedia.org/wiki/Dan_brown">Dan Brown</a>.
+</p>
+
+<p>
+    Supponiamo che le scimmie scrivano, scrivano e scrivano e producano una variet&agrave; di brevi
+    segmenti di testo. Proviamo a verificare se contengono parole di senso compiuto.
+</p>
+
+<p>
+    Ti vengono dati alcuni testi che potenzialmente contengono parole di senso compiuto.
+    Devi contare quante di queste parole compaiono in un dato testo.
+    Una parola deve essere intera e pu&ograve; essere parte di un'altra parola.
+    Non facciamo distinzione tra maiuscole e minuscole.
+    Le parole ti sono date in minuscolo e senza ripetizioni.
+    Se una parola compare pi&ugrave; volte in un testo, contala un'unica volta.
+</p>
+
+
+<p>
+    Per esempio,
+    testo - "<em>How</em> <em>are</em>sjfhdskfhskd <em>you</em>?", parole - ("how", "are", "you", "hello").
+    Il risultato sar&agrave; 3.
+</p>
+
+<p>
+    <strong>Input: </strong> Due argomenti.
+    Un testo come stringa (unicode per py2) e delle parole come un insieme di stringhe (unicode per py2).
+</p>
+
+<p>
+    <strong>Output: </strong> Il numero di parole nel testo espresso come intero.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Esempio:</strong>
+    </p>
+    <pre class="brush: python">
+count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
+count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2
+count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            {"sum", "hamlet", "infinity", "anything"}) == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Come si usa: </strong>
+    Python &egrave; un linguaggio di manipolazione testi utile e potente.
+    Questa missione &egrave; solo un piccolo assaggio del genere di strumenti di ricerca testuale che potresti costruire.
+</p>
+
+<p>
+    <strong>Prerequisiti:</strong><br>
+    0 &lt; len(text) &le; 256<br>
+    all(3 &le; len(w) and w.islower() and w.isalpha for w in words)
+</p>

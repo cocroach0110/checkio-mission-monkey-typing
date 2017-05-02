@@ -5,14 +5,11 @@
     }
 </style>
 
-<div style="text-align: center">
-        <img src="{{MEDIA}}title.png" style="max-height: 350px; max-width: 100%">
+<div class="for_info_only" style="text-align: center">
+    <img src="{{MEDIA}}title.png" style="max-height: 600px">
 </div>
 
 <div class="story">
-    <!--<img src="{{MEDIA}}220px-Monkey-typing.jpg"-->
-    <!--style="float: left; margin: 10px;">-->
-
     <p>
         ... Se eu deixar meus dedos passearem ociosamente sobre as teclas de uma máquina de escrever,
         pode acontecer que a minha fita fez uma frase inteligível. Se um exército de macacos forem
@@ -72,18 +69,24 @@
     <strong>Saída: </strong> O número de palavras no texto como um inteiro.
 </p>
 
-
-<div class="for_info_only">
-    <p>
-        <strong>Exemplo:</strong>
-    </p>
-    <pre class="brush: python">
+<p class="for_info_only">
+<strong>Exemplo:</strong>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: python">
+countWords("How aresjfhdskfhskd you?", ["how", "are", "you", "hello"]) == 3
+countWords("Bananas, give me bananas!!!", ["banana", "bananas"]) == 2
+countWords("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            ["sum", "hamlet", "infinity", "anything"]) == 1
+</pre>
+{% else %}
+<pre class="brush: python">
 count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
 count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2
 count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
             {"sum", "hamlet", "infinity", "anything"}) == 1
-    </pre>
-</div>
+</pre>
+{% endif %}
+</p>
 
 <p class="for_info_only">
     <strong>Como é utilizado: </strong>

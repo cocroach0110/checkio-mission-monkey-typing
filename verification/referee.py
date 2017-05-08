@@ -1,5 +1,6 @@
 from checkio import api
 from checkio.referees.io import CheckiOReferee
+from checkio.referees.cover_codes import js_unwrap_args
 from checkio.signals import ON_CONNECT
 
 
@@ -21,6 +22,6 @@ api.add_listener(
         cover_code={
             "python-27": cover,
             "python-3": cover,
-            "js-node": cover,
+            'js-node': js_unwrap_args,
         }
     ).on_ready)

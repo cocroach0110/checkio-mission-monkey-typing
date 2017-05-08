@@ -11,9 +11,8 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
             animationTemplateName: 'animation',
             multipleArguments: true,
 
-            tryit: function(){
-                var this_e = this;
-                $tryit = $(this_e.extSetHtmlTryIt(this_e.getTemplate('tryit')));
+            tryit: function(this_e){
+                $tryit = this_e.extSetHtmlTryIt(this_e.getTemplate('tryit'));
 
                 var tryitDataInput = $tryit.find('.tryit-content');
                 tryitDataInput.focus();

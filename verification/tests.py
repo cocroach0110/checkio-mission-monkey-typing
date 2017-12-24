@@ -49,7 +49,7 @@ TESTS = {
     "Extra": [
         {
             "input": ['LOLOLOLOLOL', ['lol', 'olo']],
-            "answer": 2,
+            "answer": 3,
             "show": "'LOLOLOLOLOL', {'lol', 'olo'}",
             "explanation": '<strong>LOLOLOLOLOL</strong>'
         },
